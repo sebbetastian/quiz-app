@@ -107,6 +107,8 @@ const Quiz = function ({
       {!start
           && (
           <div className='react-quiz'>
+            {console.log(quiz)}
+            {console.log(quiz.questions[0].question)}
             <h2>{quiz.quizTitle}</h2>
             <div>{appLocale.landingHeaderText.replace('<questionLength>', nrOfQuestions)}</div>
             {quiz.quizSynopsis

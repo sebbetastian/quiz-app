@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Quiz from './lib/Quiz';
 import { quiz } from './quiz'
+import { quiz2 } from './quiz2';
+import { quiz3 } from './quiz3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Quiz quiz={quiz}/>
+    <div className='container'>
+      <div className='quiz1'>
+        <Quiz quiz={quiz}/>
+      </div>
+    </div>
+    
   </React.StrictMode>
 );
 

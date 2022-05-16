@@ -13,12 +13,14 @@ const firebaseConfig = {
   
   const app = initializeApp(firebaseConfig);
 
-  export function writeUserData(answer) {
+  export function writeUserData(answer, question, question1) {
     const db = getDatabase();
     push(ref(db, 'answers/'), {
       answer: answer,
+      question: question,
+      question1: question1
     }, {
-      onlyOnce: true
+      onlyTwice: true
     });
     
   }

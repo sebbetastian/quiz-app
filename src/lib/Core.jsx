@@ -63,7 +63,7 @@ const Core = function ({
       }
       setTotalPoints(totalPointsTemp);
       setCorrectPoints(correctPointsTemp);
-      writeUserData(userInput)
+      writeUserData(userInput, quiz.questions[0].question, quiz.questions[1].question)
     }
   }, [endQuiz]);
 

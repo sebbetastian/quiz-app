@@ -75,7 +75,7 @@ code {
   display: block;
   white-space: normal;
   text-align: unset;
-  min-width: 275px;
+  min-width: 280px;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -105,7 +105,7 @@ code {
 }
 
 .react-quiz-container .answerBtn {
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .react-quiz-container .startQuizWrapper .startQuizBtn {

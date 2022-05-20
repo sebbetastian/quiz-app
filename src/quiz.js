@@ -27,7 +27,7 @@ export const quiz =    {
         "Fin flyt, logisk oppsett",
         "Jeg skjønte det delvis",
         "Jeg var usikker på hvor den startet",
-        "Jeg savnet følgende: kommentar boks"
+        "Jeg savnet en kommentar boks"
       ],
       "correctAnswer": "0",
       "questionType": "text"

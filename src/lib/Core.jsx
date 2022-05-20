@@ -63,7 +63,7 @@ const Core = function ({
       }
       setTotalPoints(totalPointsTemp);
       setCorrectPoints(correctPointsTemp);
-      writeUserData(userInput, quiz.questions[0].question, quiz.questions[1].question)
+      writeUserData(userInput)
     }
   }, [endQuiz]);
 
@@ -115,19 +115,19 @@ const Core = function ({
       if (answerSelectionType === 'single') {
         // correctAnswer - is string
         answerBtnCorrectClassName = (`${index + 1}` === correctAnswer ? 'correct' : '');
-        answerBtnIncorrectClassName = (`${userInputIndex}` !== correctAnswer && `${index + 1}` === `${userInputIndex}` ? 'incorrect' : '');
+        answerBtnIncorrectClassName = (`${userInputIndex}` !== correctAnswer && `${index + 1}` === `${userInputIndex}` ? 'correct' : '');
       } else {
         // correctAnswer - is array of numbers
         answerBtnCorrectClassName = (correctAnswer.includes(index + 1) ? 'correct' : '');
-        answerBtnIncorrectClassName = (!correctAnswer.includes(index + 1) && userInputIndex.includes(index + 1) ? 'incorrect' : '');
+        answerBtnIncorrectClassName = (!correctAnswer.includes(index + 1) && userInputIndex.includes(index + 1) ? 'correct' : '');
       }
 
       return (
         <div key={index}>
           <div className='hidden'>
-          {setTimeout(function(){
+          {/*{setTimeout(function(){
             window.location.reload(false);
-          }, 10000)};
+          }, 10000)};*/}
           </div>
           <button
             disabled
@@ -261,11 +261,11 @@ const Core = function ({
         appLocale={appLocale}
       />*/}
       <div className='hidden'>
-      {setTimeout(function(){
+      {/*{setTimeout(function(){
         window.location.reload(false);
-      }, 60000)};
+      }, 60000)};*/}
       </div>
-      <button onClick={() => window.location.reload(false)} className="btn.correct btn">Hjem</button>
+      <button onClick={() => window.location.reload(false)} className="btn correct">Hjem</button>
       {renderQuizResultQuestions()}
     </div>
   );

@@ -125,9 +125,6 @@ const Core = function ({
       return (
         <div key={index}>
           <div className='hidden'>
-          {/*{setTimeout(function(){
-            window.location.reload(false);
-          }, 10000)};*/}
           </div>
           <button
             disabled
@@ -204,7 +201,7 @@ const Core = function ({
         {(buttons[index] !== undefined)
           ? (
             <button
-              disabled={buttons[index].disabled || false}
+              //disabled={buttons[index].disabled || true}
               className={`${buttons[index].className} answerBtn btn`}
               onClick={() => onClickAnswer(index)}
             >
@@ -255,15 +252,7 @@ const Core = function ({
         {appLocale.resultPagePoint.replace('<correctPoints>', correctPoints).replace('<totalPoints>', totalPoints)}
       </h2>
       <br />
-      {/*<QuizResultFilter
-        filteredValue={filteredValue}
-        handleChange={handleChange}
-        appLocale={appLocale}
-      />*/}
       <div className='hidden'>
-      {/*{setTimeout(function(){
-        window.location.reload(false);
-      }, 60000)};*/}
       </div>
       <button onClick={() => window.location.reload(false)} className="btn correct">Hjem</button>
       {renderQuizResultQuestions()}

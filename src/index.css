@@ -45,7 +45,7 @@ code {
 }
 
 .react-quiz {
-  margin-top: 150px;
+  margin-top: 120px;
   justify-self: center;
   border: 1px solid #D3FFE4;
   background-color: #000F37;
@@ -122,8 +122,12 @@ code {
   width: 90%
 }
 
+.questionWrapperBody {
+  margin: 90px;
+}
+
 .react-quiz-container .answerBtn {
-  min-width: 280px;
+  min-width: 90%;
 }
 
 .react-quiz-container .startQuizWrapper .startQuizBtn {
@@ -143,7 +147,7 @@ code {
 .react-quiz-container .result-answer-wrapper {
   border: 1px solid #D3FFE4;
   border-radius: 5px;
-  width: 340;
+  width: 315px;
   margin: 30px auto 20px;
   padding-bottom: 15px;
 }

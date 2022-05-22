@@ -3,17 +3,17 @@
   "name": "En Quiz laget av Gaia talent",
   "icons": [
     {
-      "src": "questionmark.png",
+      "src": "thumnnail_image002.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "questionmark@4x.png",
+      "src": "thumnnail_image003.png",
       "type": "image/png",
       "sizes": "256x256"
     },
     {
-      "src": "questionmark@8x.png",
+      "src": "thumnnail_image004.png",
       "type": "image/png",
       "sizes": "512x512"
     }

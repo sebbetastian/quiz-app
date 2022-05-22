@@ -20,6 +20,7 @@ html {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  display: flex;
 }
 
 code {
@@ -47,8 +48,10 @@ code {
 
 .jumbotron {
   width: 100%;
-  height: 100%;
+  height: 50%;
+  align-self: center;
   display: grid;
+  align-items: start;
 }
 
 .react-quiz {
@@ -109,6 +112,13 @@ code {
 .react-quiz-container .questionWrapper .btn.correct {
   background-color: #D3FFE4;
   color: #000F37;
+}
+
+#root .react-quiz-container .questionWrapper .card-body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .react-quiz-container .questionModal .alert {

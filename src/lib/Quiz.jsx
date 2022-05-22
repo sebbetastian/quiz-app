@@ -107,9 +107,9 @@ const Quiz = function ({
       {!start
           && (
           <div className='react-quiz'>
-            {console.log(quiz)}
-            {console.log(quiz.questions[0].question)}
-            <h1>{quiz.quizTitle}</h1>
+            <div className='quiz-header'>
+              <h1>{quiz.quizTitle}</h1>
+            </div>
             <div>{appLocale.landingHeaderText.replace('<questionLength>', nrOfQuestions)}</div>
             {quiz.quizSynopsis
               && (
@@ -118,7 +118,7 @@ const Quiz = function ({
               </div>
               )}
             <div className="startQuizWrapper">
-              <button onClick={() => setStart(true)} className="startQuizBtn btn">{appLocale.startQuizBtn}</button>
+              <button onClick={() => setStart(true)} className="startQuizBtn btn btn-lg">{appLocale.startQuizBtn}</button>
             </div>
           </div>
           )}

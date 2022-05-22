@@ -60,10 +60,19 @@ code {
   background-color: white;
   color: black;
   border-radius: 5px;
-  padding: 30px;
   width: 315px;
   display: grid;
   align-items: center;
+}
+
+.react-quiz .quiz-header {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  background-color: #D3FFE4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .quiz1 {
@@ -95,7 +104,7 @@ code {
   user-select: none;
   cursor: pointer;
   margin: 0 auto;
-  transition: ease-in 0.2s;
+  transition: ease-out 0.15s;
 }
 
 .react-quiz-container .questionWrapper .btn {
@@ -164,17 +173,18 @@ code {
   border-radius: 2px;
   line-height: 1.35135;
   border-radius: 5px;
-  background-color: #D3FFE4;
+  background-color: #fff;
   border: 1px solid black;
-  width: 100%;
+  width: 90%;
+  margin-bottom: 15px;
 }
 
 .nextQuestionBtn {
   background-color: #000F37;
   color: #D3FFE4;
-  transition: ease-in 0.3s;
   position: absolute;
   margin: 0 auto;
+  transition: 0.3s;
 }
 
 .btn.correct:hover {

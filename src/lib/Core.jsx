@@ -64,6 +64,7 @@ const Core = function ({
       setTotalPoints(totalPointsTemp);
       setCorrectPoints(correctPointsTemp);
       writeUserData(userInput)
+      console.log(userInput)
     }
   }, [endQuiz]);
 
@@ -254,7 +255,7 @@ const Core = function ({
       <br />
       <div className='hidden'>
       </div>
-      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg correct">Gjenta Quiz</button>
+      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>
       {renderQuizResultQuestions()}
     </div>
   );

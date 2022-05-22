@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Core from './Core';
 import {defaultLocale} from './Locale';
-import '../index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Quiz = function ({
   quiz, shuffle, showDefaultResult, onComplete, customResultPage, showInstantFeedback, continueTillCorrect,
@@ -103,7 +103,7 @@ const Quiz = function ({
   };
 
   return (
-    <div className="react-quiz-container">
+    <div className="react-quiz-container jumbotron">
       {!start
           && (
           <div className='react-quiz'>

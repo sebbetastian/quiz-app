@@ -128,7 +128,7 @@ const Core = function ({
           </div>
           <button
             disabled
-            className={`answerBtn btn ${answerBtnCorrectClassName}${answerBtnIncorrectClassName}`}
+            className={`answerBtn btn  ${answerBtnCorrectClassName}${answerBtnIncorrectClassName}`}
           >
             {questionType === 'text' && <span>{answer}</span>}
             {questionType === 'photo' && <img src={answer} alt="image" />}
@@ -212,7 +212,7 @@ const Core = function ({
           : (
             <button
               onClick={() => onClickAnswer(index)}
-              className="answerBtn btn"
+              className="answerBtn btn btn-lg"
             >
               {questionType === 'text' && answer}
               {questionType === 'photo' && <img src={answer} alt="image" />}
@@ -254,7 +254,7 @@ const Core = function ({
       <br />
       <div className='hidden'>
       </div>
-      <button onClick={() => window.location.reload(false)} className="btn correct">Hjem</button>
+      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Hjem</button>
       {renderQuizResultQuestions()}
     </div>
   );
@@ -285,7 +285,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <div>
-            <button onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn">
+            <button onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>
           </div>

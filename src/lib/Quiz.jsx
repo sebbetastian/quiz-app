@@ -109,7 +109,7 @@ const Quiz = function ({
           <div className='react-quiz'>
             {console.log(quiz)}
             {console.log(quiz.questions[0].question)}
-            <h2>{quiz.quizTitle}</h2>
+            <h1>{quiz.quizTitle}</h1>
             <div>{appLocale.landingHeaderText.replace('<questionLength>', nrOfQuestions)}</div>
             {quiz.quizSynopsis
               && (

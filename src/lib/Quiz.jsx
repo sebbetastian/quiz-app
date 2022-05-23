@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Core from './Core';
 import {defaultLocale} from './Locale';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Zoom } from 'react-reveal';
+import { Slide, Zoom } from 'react-reveal';
 import config from 'react-reveal/globals';
 
 config({ ssrFadeout: true });

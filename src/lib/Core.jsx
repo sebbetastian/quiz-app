@@ -219,7 +219,6 @@ const Core = function ({
             </button>
           )
           : (
-            <Fade right>
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
@@ -227,7 +226,6 @@ const Core = function ({
               {questionType === 'text' && answer}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
-            </Fade>
           )}
       </Fragment>
     ));
@@ -291,20 +289,16 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
-          <Fade right>
           <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
-          </Fade>
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
           {question && renderTags(answerSelectionTypeState, question.correctAnswer.length, question.segment)}
           {question && renderAnswers(question, buttons)}
           {showNextQuestionButton
           && (
           <div>
-            <Fade right>
             <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>
-            </Fade>
           </div>
           )}
         </div>

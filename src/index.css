@@ -41,14 +41,14 @@ code {
   width: 100%;
   text-align: center;
   height: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
 }
 
 .jumbotron {
   width: 100%;
-  height: 50%;
+  height: 65%;
   align-self: center;
   display: grid;
   align-items: start;
@@ -115,7 +115,8 @@ code {
   display: block;
   white-space: normal;
   text-align: unset;
-  min-width: 273px;
+  min-width: 282px;
+  
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -153,11 +154,15 @@ code {
 .questionWrapperBody {
   margin: 0px;
   height: 100%;
+  transition: margin 0.3s
 }
 
 .questionWrapperBody div {
   display: flex;
   justify-content: center;
+  transform-style: flat;
+  transition: ease-in-out 0.3s;
+  transition-delay: 0.1s;
 }
 
 .react-quiz-container .answerBtn {
@@ -184,7 +189,7 @@ code {
   color: #D3FFE4;
   position: absolute;
   margin: 0 auto;
-  transition: 0.3s;
+  transition: margin 0.3s
 }
 
 .btn.correct:hover {

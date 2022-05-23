@@ -286,7 +286,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <div>
-            <button onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
+            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>
           </div>

@@ -3,6 +3,10 @@ import Core from './Core';
 import {defaultLocale} from './Locale';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Zoom } from 'react-reveal';
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
+
 
 const Quiz = function ({
   quiz, shuffle, showDefaultResult, onComplete, customResultPage, showInstantFeedback, continueTillCorrect,
@@ -107,7 +111,7 @@ const Quiz = function ({
     <div className="react-quiz-container jumbotron">
       {!start
           && (
-          <Zoom>
+          <Zoom ssrFadeout>
           <div className='react-quiz'>
             <div key={0} className='quiz-header'>
               <h1 key={1} >{quiz.quizTitle}</h1>

@@ -12,6 +12,9 @@ import { Zoom } from 'react-reveal';
 import { Slide } from 'react-reveal';
 import Jump from 'react-reveal/Jump';
 import { Fade } from 'react-reveal';
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 const Core = function ({
   questions, appLocale, showDefaultResult, onComplete, customResultPage, showInstantFeedback, continueTillCorrect,
@@ -215,7 +218,7 @@ const Core = function ({
             </button>
           )
           : (
-            <Fade right duration="1000">
+            <Fade ssrFadeout right>
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
@@ -252,7 +255,7 @@ const Core = function ({
 
   const renderResult = () => (
     <div className="card-body">
-      <Fade bottom>
+      <Fade bottom ssrFadeout>
       <h2>
         {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}
       </h2>
@@ -287,7 +290,7 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
-          <Fade right>
+          <Fade ssrFadeout right>
           <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
           </Fade>
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
@@ -296,7 +299,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <div>
-            <Fade right>
+            <Fade ssrFadeOut right>
             <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>

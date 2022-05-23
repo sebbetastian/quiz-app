@@ -8,6 +8,10 @@ import Explanation from './core-components/Explanation';
 import { quiz } from '../quiz';
 import random from './randomId';
 import {writeUserData} from './firebase.js'
+import { Zoom } from 'react-reveal';
+import { Slide } from 'react-reveal';
+import Jump from 'react-reveal/Jump';
+import { Fade } from 'react-reveal';
 
 const Core = function ({
   questions, appLocale, showDefaultResult, onComplete, customResultPage, showInstantFeedback, continueTillCorrect,
@@ -211,6 +215,7 @@ const Core = function ({
             </button>
           )
           : (
+            <Fade right duration="1000">
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
@@ -218,6 +223,7 @@ const Core = function ({
               {questionType === 'text' && answer}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
+            </Fade>
           )}
       </Fragment>
     ));
@@ -246,6 +252,7 @@ const Core = function ({
 
   const renderResult = () => (
     <div className="card-body">
+      <Fade bottom>
       <h2>
         {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}
       </h2>
@@ -257,6 +264,7 @@ const Core = function ({
       </div>
       <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>
       {renderQuizResultQuestions()}
+      </Fade>
     </div>
   );
 
@@ -279,16 +287,20 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
+          <Fade right>
           <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
+          </Fade>
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
           {question && renderTags(answerSelectionTypeState, question.correctAnswer.length, question.segment)}
           {question && renderAnswers(question, buttons)}
           {showNextQuestionButton
           && (
           <div>
+            <Fade right>
             <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>
+            </Fade>
           </div>
           )}
         </div>

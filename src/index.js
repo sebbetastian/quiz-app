@@ -5,6 +5,7 @@ import Quiz from './lib/Quiz';
 import { quiz } from './quiz'
 import { quiz2 } from './quiz2';
 import { quiz3 } from './quiz3';
+import { Zoom } from 'react-reveal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

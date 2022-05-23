@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Core from './Core';
 import {defaultLocale} from './Locale';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Zoom } from 'react-reveal';
 
 const Quiz = function ({
   quiz, shuffle, showDefaultResult, onComplete, customResultPage, showInstantFeedback, continueTillCorrect,
@@ -106,6 +107,7 @@ const Quiz = function ({
     <div className="react-quiz-container jumbotron">
       {!start
           && (
+          <Zoom>
           <div className='react-quiz'>
             <div key={0} className='quiz-header'>
               <h1 key={1} >{quiz.quizTitle}</h1>
@@ -121,6 +123,7 @@ const Quiz = function ({
               <button onClick={() => setStart(true)} className="startQuizBtn btn btn-lg">{appLocale.startQuizBtn}</button>
             </div>
           </div>
+          </Zoom>
           )}
 
       {start && (

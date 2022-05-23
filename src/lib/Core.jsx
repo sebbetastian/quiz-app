@@ -141,6 +141,7 @@ const Core = function ({
             {questionType === 'text' && <span>{answer}</span>}
             {questionType === 'photo' && <img src={answer} alt="image" />}
           </button>
+          
         </div>
       );
     });
@@ -218,7 +219,7 @@ const Core = function ({
             </button>
           )
           : (
-            <Fade ssrFadeout right>
+            <Fade right>
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
@@ -255,7 +256,7 @@ const Core = function ({
 
   const renderResult = () => (
     <div className="card-body">
-      <Fade bottom ssrFadeout>
+      <Fade bottom>
       <h2>
         {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}
       </h2>
@@ -290,7 +291,7 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
-          <Fade ssrFadeout right>
+          <Fade right>
           <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
           </Fade>
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
@@ -299,7 +300,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <div>
-            <Fade ssrFadeOut right>
+            <Fade right>
             <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
               {appLocale.nextQuestionBtn}
             </button>

@@ -111,7 +111,7 @@ const Quiz = function ({
     <div className="react-quiz-container jumbotron">
       {!start
           && (
-          <Zoom ssrFadeout>
+          <Zoom>
           <div className='react-quiz'>
             <div key={0} className='quiz-header'>
               <h1 key={1} >{quiz.quizTitle}</h1>
